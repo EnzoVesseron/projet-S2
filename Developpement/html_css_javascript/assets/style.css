@@ -1,0 +1,145 @@
+nav {
+    z-index: 2;
+}
+
+#logo {
+    position: absolute;
+    width: 10%;
+    left: 45%;
+    right: 39.21%;
+    top: 37%;
+    bottom: 35.81%;
+}
+
+#imgfond {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    margin-right: 50%;
+    top: -50px;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+}
+
+#gillus{
+    position: absolute;
+    left: 23px;
+    top: 20px;
+}
+
+#desc {
+    margin-top: 40%;
+}
+
+#imgdesc {
+    width: 50%;
+    height: auto;
+}
+
+#textdesc {
+    text-align: center;
+    margin-right: 50px;
+    align-items: center;
+    
+}
+
+.gradient-button {
+    /* fallback for old browsers */
+    background: #ffc800;
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgb(255, 200, 0), rgb(255, 0, 0));
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgb(255, 200, 0), rgb(255, 0, 0))
+}
+
+.gradient-bar {
+    /* fallback for old browsers */
+    background: #888888;
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgb(104, 104, 104), rgb(85, 85, 85));
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgb(145, 145, 145), rgb(145, 145, 145))
+}
+
+#button {
+    width: 50%;
+}
+
+@media (max-width: 1500px) {
+    #desc {
+        margin-top: 75%;
+    }
+}
+
+
+#flecheRetour{
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+#boutonOrange{
+    background: conic-gradient(from 183.71deg at 50% 50%, #FFC700 0deg, #FF0000 178.64deg, #FFC700 360deg);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 13px;
+    padding : 7px;
+}
+
+body{
+    background-color: #F4F4F4;
+}
+
+h1{
+    font-family: 'Roboto', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+}
+
+h2{
+    font-family: 'Roboto', Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+a:active {
+    text-decoration: none;
+    color: black;
+}
+
+.width {
+    width: 400px;
+
+}
+
+.Z {
+    z-index: 1;
+}

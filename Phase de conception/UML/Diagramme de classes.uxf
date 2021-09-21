@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1404</x>
+      <y>585</y>
+      <w>594</w>
+      <h>234</h>
+    </coordinates>
+    <panel_attributes>Client
+--
+- numCli : int
+- nomCli : string
+- pnomCli : string
+- dateNaisCli : Date
+- villeCli : string
+- adresseCli : string
+- CPCli : int
+- emailCli : string
+- telCli : int
+- idConnexion : string
+- password: string
+--
+_+ nouveauCompte(numCli, nomCli, pnomCli, dateNaisCli, emailCli, idConnexion, password) : void_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1494</x>
+      <y>81</y>
+      <w>432</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>Support
+--
+- numTicket : int
+- sujet : String
+- dateSupport : Date
+- heureSupport : String
+--
+_+ nouveauSupport(numTicket, sujet, dateSupport, heureSupport) : void_
+_+ getFromNumCli(numCli) : Support[]_
+_+ getFromNumEmp(numEmp) : Support[]_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1665</x>
+      <y>333</y>
+      <w>477</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Rendez-Vous
+--
+- numRDV : int
+- typeRDV : string
+- dateRDV : Date
+- heureRDV : string
+- lieuRDV : string
+--
+_+ ajouterRDV(numRDV, typeRDV, dateRDV, heureRDV, lieuRDV) : void_
+_+ getFromNumCli(numCli) : Rendez-Vous[]_
+_+ getFromNumEmp(numEmp) : Rendez-vous[]_
++ modifRDV(typeRDV, dateRDV, heureRDV, lieuRDV) : void
++ supprRDV() : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2421</x>
+      <y>180</y>
+      <w>189</w>
+      <h>234</h>
+    </coordinates>
+    <panel_attributes>Employé
+--
+- numEmp : Int
+- nomEmp : String
+- pnomEmp : String
+- dateNaisEmp : Date
+- villeEmp : String
+- adresseEmp : String
+- CPEmp : Int
+- emailEmp : String
+- telEmp : Int
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>531</x>
+      <y>288</y>
+      <w>765</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>Commande
+--
+- numCmde : int
+- dateCmde : Date
+- / prixTotal : float
+- adresseDeLivraison : string
+- dateLivraison: Date
+- CPLivraison : int
+- villeLivraison : string
+- moyenPaiement : string
+--
+_+ nouvelleCommande(numCmde, dateCmde, adresseDeLivraison, dateLivraison, CPLivraison, villeLivraison, moyenPaiement) : void_
+_+ getFromNumCli(numCli) : Commande[]_
++ ajouterProduits(Amas&lt;Produit&gt; $produits) : void
++ enleverProduit(Produit $produit) :  void
++ compoValide() : bool
++ afficherCommande() : string
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>486</y>
+      <w>252</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>Produit
+--
+- numProd : int
+- libProduit : string
+- prixProduit : float
+- marque : string
+- caractéristiques : string
+- enStock : bool
+- imageLien : string
+--
++ estCompatible(Produit $produit) : bool
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>99</x>
+      <y>792</y>
+      <w>189</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>TypeProduit
+--
+- numTypeProd : int
+- libTypeProd : string
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>243</x>
+      <y>495</y>
+      <w>306</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;
+m1=0..*
+m2=0..*
+&lt; Contenir
+r1= - lesProduits</panel_attributes>
+    <additional_attributes>10.0;20.0;320.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1287</x>
+      <y>432</y>
+      <w>171</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=1
+&lt; Passer</panel_attributes>
+    <additional_attributes>10.0;20.0;160.0;20.0;160.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1521</x>
+      <y>207</y>
+      <w>99</w>
+      <h>396</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=1
+Contacter ^</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;420.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1782</x>
+      <y>504</y>
+      <w>90</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=1
+Prendre ^</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2133</x>
+      <y>342</y>
+      <w>306</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=1
+&lt; Prendre en charge</panel_attributes>
+    <additional_attributes>10.0;20.0;320.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1917</x>
+      <y>162</y>
+      <w>522</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=1
+&lt; Repondre</panel_attributes>
+    <additional_attributes>10.0;20.0;560.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1782</x>
+      <y>207</y>
+      <w>81</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..1
+m2=0..*
+Aboutir v</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>216</x>
+      <y>639</y>
+      <w>117</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..*
+correspondre v</panel_attributes>
+    <additional_attributes>10.0;170.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>243</x>
+      <y>603</y>
+      <w>1179</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..*
+m2=1
+&lt; Choisir</panel_attributes>
+    <additional_attributes>10.0;20.0;1290.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>207</x>
+      <y>153</y>
+      <w>765</w>
+      <h>351</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=0..*
+proposer v
+r1= -lesProduits
+r2= -questionnaire</panel_attributes>
+    <additional_attributes>10.0;370.0;10.0;20.0;830.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1170</x>
+      <y>171</y>
+      <w>351</w>
+      <h>432</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=0..*
+&lt; répondre
+r1=-questionnaire</panel_attributes>
+    <additional_attributes>10.0;18.0;350.0;20.0;350.0;460.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>954</x>
+      <y>144</y>
+      <w>225</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>Question
+--
+- numQuestion : int
+- enonceQuestion : string
+--
++ répondre(string $reponse) : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1242</x>
+      <y>27</y>
+      <w>225</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>Réponses
+--
+
+--
++ analyserRéponse() : Amas&lt;Produit&gt;
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1395</x>
+      <y>99</y>
+      <w>27</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>666</x>
+      <y>720</y>
+      <w>576</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>Tous les attributs de toutes les classes disposent de méthodes get et set, qui ne sont pas forcément
+indiquées, par soucis de lisibilité.</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

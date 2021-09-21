@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLSequenceAllInOne</id>
+    <coordinates>
+      <x>0</x>
+      <y>66</y>
+      <w>1656</w>
+      <h>726</h>
+    </coordinates>
+    <panel_attributes>title= Site web
+obj=Client~a ACTOR EXECUTION
+obj=Question~b
+obj=Réponses~c
+obj=Commande~d
+obj=Rendez-vous~e
+obj=Support~f
+obj=employé~g
+
+a-&gt;&gt;&gt;b : répondre(réponse) ; on=b
+b.&gt;&gt;&gt;a;
+
+b-&gt;&gt;&gt;c : produits =  analyserRéponses() ; on=c
+c.&gt;&gt;&gt;b;
+off=b;
+
+c-&gt;&gt;&gt;d : ajouterProduits(produits) ; on=d
+d.&gt;&gt;&gt;c
+off=c;
+
+a-&gt;&gt;&gt;d : enleverProduit(produit) ;
+d.&gt;&gt;&gt;a
+
+a-&gt;&gt;&gt;d : ajouterProduit(produit) ;
+d.&gt;&gt;&gt;a
+
+
+d-&gt;d + : compoValide()
+d-&gt;d + : afficherCommande()
+off=d
+
+on=e;
+a-&gt;&gt;&gt;e : ajouterRDV(numRDV, typeRDV, dateRDV, heureRDV, lieuRDV)
+e.&gt;&gt;&gt;a
+on=g
+g-&gt;&gt;&gt;e : modifRDV()
+e.&gt;&gt;&gt;g
+g-&gt;&gt;&gt;e : supprRDV()
+e.&gt;&gt;&gt;g
+a-&gt;&gt;&gt;e : modifRDV()
+e.&gt;&gt;&gt;a
+a-&gt;&gt;&gt;e : supprRDV()
+e.&gt;&gt;&gt;a
+
+
+on=f;
+f-&gt;&gt;&gt;e : ajouterRDV(numRDV, typeRDV, dateRDV, heureRDV, lieuRDV)
+e.&gt;&gt;&gt;f
+off=e
+a-&gt;&gt;&gt;f : nouveauSupport(numTicket, sujet, dateSupport, heureSupport)
+f.&gt;&gt;&gt;a
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

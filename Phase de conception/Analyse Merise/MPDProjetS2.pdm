@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project Location="C:\Users\alexi\OneDrive\Bureau" Name="Untitled1" Author="alexi" Version="1.0" Date="04/06/2021" DefaultPackage="1">
+  <Package Id="1" Name="Core" Description="" Color="-1">
+    <Table X="20" Y="20" Width="178" Height="230" Id="1" Name="client" Comment="">
+      <Key Name="numcli" Comment="" Size="0" Type="Integer" IsNull="False" IsIndex="False" IsUnique="False" IsPrimary="True" AutoIncrement="True" DefaultValue="" />
+      <Key Name="nomcli" Comment="" Size="0" Type="Text" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <Key Name="pnomcli" Comment="" Size="0" Type="Text" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <Key Name="datenaiscli" Comment="" Size="0" Type="Date" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <Key Name="villecli" Comment="" Size="0" Type="Text" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <Key Name="adressecli" Comment="" Size="0" Type="Text" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <Key Name="cpcli" Comment="" Size="0" Type="Integer" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <Key Name="emailcli" Comment="" Size="0" Type="Text" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <Key Name="telcli" Comment="" Size="0" Type="Integer" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <Key Name="idconnexion" Comment="" Size="0" Type="Text" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <Key Name="password" Comment="" Size="0" Type="Text" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+    </Table>
+    <Table X="617" Y="34" Width="160" Height="196" Id="2" Name="rendez-vous" Comment="">
+      <Key Name="numrdv" Comment="" Size="0" Type="Integer" IsNull="False" IsIndex="False" IsUnique="False" IsPrimary="True" AutoIncrement="True" DefaultValue="" />
+      <Key Name="typerdv" Comment="" Size="0" Type="Text" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <Key Name="daterdv" Comment="" Size="0" Type="DateTime" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <Key Name="heurerdv" Comment="" Size="0" Type="Text" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <Key Name="lieurdv" Comment="" Size="0" Type="Text" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <Key Name="numticket" Comment="" Size="0" Type="Integer" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <Key Name="numcli" Comment="" Size="0" Type="Integer" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <Key Name="numemp" Comment="" Size="0" Type="Integer" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <ForeignKey Name="rdv_fk(numticket)" Prefix="" Comment="References support" Reference="3" IsNull="True" IsPrimary="False" OnUpdate="CASCADE" OnDelete="CASCADE" />
+      <ForeignKey Name="rdv_fk(numcli)" Prefix="" Comment="References client" Reference="1" IsNull="False" IsPrimary="False" OnUpdate="CASCADE" OnDelete="CASCADE" />
+      <ForeignKey Name="rdv_fk(numemp)" Prefix="" Comment="References employe" Reference="4" IsNull="False" IsPrimary="False" OnUpdate="CASCADE" OnDelete="CASCADE" />
+    </Table>
+    <Table X="977" Y="44" Width="160" Height="148" Id="3" Name="support" Comment="">
+      <Key Name="numticket" Comment="" Size="0" Type="Integer" IsNull="False" IsIndex="False" IsUnique="False" IsPrimary="True" AutoIncrement="True" DefaultValue="" />
+      <Key Name="sujet" Comment="" Size="0" Type="Text" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <Key Name="datesupport" Comment="" Size="0" Type="Date" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <Key Name="heuresupport" Comment="" Size="0" Type="Text" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <Key Name="numemp" Comment="" Size="0" Type="Text" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <Key Name="numcli" Comment="" Size="0" Type="Text" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <ForeignKey Name="support_fk(numemp)" Prefix="" Comment="References employe" Reference="4" IsNull="False" IsPrimary="False" OnUpdate="CASCADE" OnDelete="CASCADE" />
+      <ForeignKey Name="support_fk(numcli)" Prefix="" Comment="References client" Reference="1" IsNull="False" IsPrimary="False" OnUpdate="CASCADE" OnDelete="CASCADE" />
+    </Table>
+    <Table X="1103" Y="291" Width="160" Height="164" Id="4" Name="employe" Comment="">
+      <Key Name="numemp" Comment="" Size="0" Type="Integer" IsNull="False" IsIndex="False" IsUnique="False" IsPrimary="True" AutoIncrement="True" DefaultValue="" />
+      <Key Name="nomemp" Comment="" Size="0" Type="Text" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <Key Name="pnomemp" Comment="" Size="0" Type="Text" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <Key Name="datenaisemp" Comment="" Size="0" Type="Date" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <Key Name="villeemp" Comment="" Size="0" Type="Text" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <Key Name="adresseemp" Comment="" Size="0" Type="Text" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <Key Name="cpemp" Comment="" Size="0" Type="Integer" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <Key Name="emailemp" Comment="" Size="0" Type="Text" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <Key Name="telemp" Comment="" Size="0" Type="Integer" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+    </Table>
+    <Table X="628" Y="266" Width="160" Height="148" Id="5" Name="produit" Comment="">
+      <Key Name="numprod" Comment="" Size="0" Type="Integer" IsNull="False" IsIndex="False" IsUnique="False" IsPrimary="True" AutoIncrement="True" DefaultValue="" />
+      <Key Name="libproduit" Comment="" Size="0" Type="Text" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <Key Name="enstock" Comment="" Size="0" Type="Boolean" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <Key Name="prixproduit" Comment="" Size="0" Type="Integer" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <Key Name="marque" Comment="" Size="0" Type="Text" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <Key Name="caractéristiques" Comment="" Size="0" Type="Text" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <Key Name="idtypeproduit" Comment="" Size="0" Type="Integer" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <ForeignKey Name="produit_fk(idtypeproduit)" Prefix="" Comment="References typeproduit" Reference="6" IsNull="False" IsPrimary="False" OnUpdate="CASCADE" OnDelete="CASCADE" />
+    </Table>
+    <Table X="411" Y="263" Width="160" Height="84" Id="6" Name="typeproduit" Comment="">
+      <Key Name="idtypeproduit" Comment="" Size="0" Type="Integer" IsNull="False" IsIndex="False" IsUnique="False" IsPrimary="True" AutoIncrement="True" DefaultValue="" />
+      <Key Name="libtypeproduit" Comment="" Size="0" Type="Text" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+    </Table>
+    <Table X="446" Y="709" Width="160" Height="180" Id="7" Name="commande" Comment="">
+      <Key Name="numcmde" Comment="" Size="0" Type="Integer" IsNull="False" IsIndex="False" IsUnique="False" IsPrimary="True" AutoIncrement="True" DefaultValue="" />
+      <Key Name="datecmde" Comment="" Size="0" Type="Date" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <Key Name="villelivraison" Comment="" Size="0" Type="Text" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <Key Name="adresselivraison" Comment="" Size="0" Type="Text" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <Key Name="datelivraison" Comment="" Size="0" Type="Date" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <Key Name="prixtotal" Comment="" Size="0" Type="Decimal" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <Key Name="cplivraison" Comment="" Size="0" Type="Integer" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <Key Name="moyenpaiement" Comment="" Size="0" Type="Text" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <Key Name="numcli" Comment="" Size="0" Type="Integer" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <ForeignKey Name="commande_fk(numcli)" Prefix="" Comment="References client" Reference="1" IsNull="False" IsPrimary="False" OnUpdate="CASCADE" OnDelete="CASCADE" />
+    </Table>
+    <Table X="138" Y="526" Width="160" Height="100" Id="8" Name="repondre" Comment="">
+      <Key Name="reponsesclient" Comment="" Size="0" Type="Text" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+      <Key Name="numcli" Comment="" Size="0" Type="Integer" IsNull="False" IsIndex="False" IsUnique="False" IsPrimary="True" AutoIncrement="True" DefaultValue="" />
+      <Key Name="numquestion" Comment="" Size="0" Type="Integer" IsNull="False" IsIndex="False" IsUnique="False" IsPrimary="True" AutoIncrement="True" DefaultValue="" />
+      <ForeignKey Name="repondre_fk(numcli)" Prefix="" Comment="References client" Reference="1" IsNull="False" IsPrimary="False" OnUpdate="CASCADE" OnDelete="CASCADE" />
+      <ForeignKey Name="repondre_fk(numquestion)" Prefix="" Comment="References questions" Reference="10" IsNull="False" IsPrimary="False" OnUpdate="CASCADE" OnDelete="CASCADE" />
+    </Table>
+    <Table X="188" Y="322" Width="160" Height="100" Id="9" Name="rechercher" Comment="">
+      <Key Name="numcli" Comment="" Size="0" Type="Integer" IsNull="False" IsIndex="False" IsUnique="False" IsPrimary="True" AutoIncrement="True" DefaultValue="" />
+      <Key Name="numprod" Comment="" Size="0" Type="Integer" IsNull="False" IsIndex="False" IsUnique="False" IsPrimary="True" AutoIncrement="True" DefaultValue="" />
+      <ForeignKey Name="rechercher_fk(numprod)" Prefix="" Comment="References produit" Reference="5" IsNull="False" IsPrimary="False" OnUpdate="CASCADE" OnDelete="CASCADE" />
+      <ForeignKey Name="rechercher_fk(numcli)" Prefix="" Comment="References client" Reference="1" IsNull="False" IsPrimary="False" OnUpdate="CASCADE" OnDelete="CASCADE" />
+    </Table>
+    <Table X="145" Y="661" Width="160" Height="84" Id="10" Name="questions" Comment="">
+      <Key Name="numquestion" Comment="" Size="0" Type="Integer" IsNull="False" IsIndex="False" IsUnique="False" IsPrimary="True" AutoIncrement="True" DefaultValue="" />
+      <Key Name="enonce" Comment="" Size="0" Type="Text" IsNull="True" IsIndex="False" IsUnique="False" IsPrimary="False" AutoIncrement="False" DefaultValue="" />
+    </Table>
+    <Table X="730" Y="500" Width="160" Height="84" Id="12" Name="composer" Comment="">
+      <Key Name="numprod" Comment="" Size="0" Type="Integer" IsNull="False" IsIndex="False" IsUnique="False" IsPrimary="True" AutoIncrement="True" DefaultValue="" />
+      <Key Name="numcmde" Comment="" Size="0" Type="Integer" IsNull="False" IsIndex="False" IsUnique="False" IsPrimary="True" AutoIncrement="True" DefaultValue="" />
+      <ForeignKey Name="composer_fk(numcmde)" Prefix="" Comment="References commande" Reference="7" IsNull="False" IsPrimary="False" OnUpdate="CASCADE" OnDelete="CASCADE" />
+      <ForeignKey Name="composer_fk(numprod)" Prefix="" Comment="References produit" Reference="5" IsNull="False" IsPrimary="False" OnUpdate="CASCADE" OnDelete="CASCADE" />
+    </Table>
+  </Package>
+</Project>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-100 w-100 bg-light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="../assets/img/logo.png" />
+    <link href="../assets/style.css" rel="stylesheet">
+    <title>Fiche détails</title>
+    <style>
+
+        #div-header{
+            top: 0;
+            display: flex;
+        }
+
+        #positionboutonimg {
+            margin: auto;
+            margin-top: 3%;
+        }
+
+        p{
+            font-family: 'Roboto', Arial, sans-serif;
+            font-style: normal;
+            font-weight: 200;
+            font-size: 32px;
+            line-height: 32px;
+            text-align: center;
+        }
+
+        #imgconfig{
+            width: 250px;
+            height: 250px;
+            margin-left : 20px;
+            margin-top: 20px;
+        }
+
+        #btnimg{
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.05);
+            border-radius: 13px;
+            padding : 7px;
+            margin-right: 100px;
+            background-color: #FFFFFF;
+            width: 300px;
+            height: 300px;
+        }
+
+        #btnctg{
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.05);
+            border-radius: 13px;
+            padding : 7px;
+            margin-right: 100px;
+            background-color: #FFFFFF;
+            width: 300px;
+            height: auto;
+        }
+
+        #positionbouton{
+            margin: auto;
+            margin-top: 100px;
+            margin-left: 25%;
+        }
+
+        #ttrctg{
+            font-family: 'Roboto', Arial, sans-serif;
+            font-weight: 900;
+            font-size: 18px;
+            line-height: 21px;
+            text-align: center;
+            margin: auto;
+            margin-right : 10px;
+        }
+
+        #txtctg{
+            font-family: 'Roboto', Arial, sans-serif;
+            font-size: 18px;
+            line-height: 21px;
+            text-align: center;
+            margin: auto;
+            margin-right : 10px;
+        }
+
+        #txtbouton1{
+            font-family: 'Roboto', Arial, sans-serif;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 18px;
+            line-height: 21px;
+            text-align: center;
+            color: #FFFFFF;
+            margin: 10px 20px;
+        }
+
+        #bouton{
+            background: #FFFFFF;
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.05);
+            border-radius: 13px;
+            padding : 7px;
+            margin-left:16%
+        }
+
+        #txtbouton2{
+            font-family: 'Roboto', Arial, sans-serif;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 18px;
+            line-height: 21px;
+            text-align: center;
+            color : black;
+            margin: 10px 20px;
+        }
+
+        #boutonOrange{
+            margin-left: 10%;
+        }
+    </style>
+</head>
+
+<body class="w-100 h-100">
+<div id="div-header">
+    <header>
+        <p class="mx-5 my-3 bg-white position-fixed px-5 py-1 rounded-pill fw-bold shadow-sm">Gillus</p>
+
+        <div class="mx-5 my-3 position-fixed end-0 d-flex flex-row">
+
+            <nav class="navbar navbar-expand-lg navbar-light py-0 bg-white rounded text-end shadow-sm px-2 mx-3 rounded-pill">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark py-0" aria-current="page"
+                                   href="../index.html">Accueil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a  class="nav-link text-danger border-bottom border-danger p-0" href="CommencerConfig.html">Sur mesure</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark py-0" href="#">Réparation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark py-0" href="#">Créer config</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark py-0" href="giloumatic.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <svg xmlns="http://www.w3.org/2000/svg" style="width : 40px;"
+                 class="bg-white rounded shadow-sm p-2 rounded-pill" fill="none" viewBox="0 0 24 24"
+                 stroke="currentColor">
+                <a href="Authentification.html"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                      d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></a>
+            </svg>
+        </div>
+
+    </header>
+
+</div>
+<div id="flecheRetour"> <a href="ResultatQuizz.html"><img src="../assets/img/fleche.png" height="30" width="30" alt="Retour"></a></div>
+
+
+<div class="row justify-content-md-center" id="positionboutonimg">
+    <div class="col-md-auto">
+            <div id="btnimg"><img src="../assets/img/config1.png" id="imgconfig"></div>
+    </div>
+</div>
+
+<div class="d-flex flex-row" id="positionbouton">
+    <div id="btnctg">
+        <p id="ttrctg">Composants :</p>
+        <br>
+        <p id="txtctg"><ul>
+            <li>AMD Ryzen 5 3600</li>
+            <li>MSI MPG B550 GAMING PLUS</li>
+            <li>G.Skill Aegis DDR4 2 x 8 Go 3200 MHz CAS 16</li>
+            <li>Asus GeForce GTX 1650 SUPER Phoenix OC</li>
+            <li>Samsung 870 EVO - 500 Go</li></ul>
+        </p>
+    </div>
+    <div id="btnctg">
+        <p id="ttrctg">Performances :</p>
+        <br>
+        <br>
+        <p id="txtctg">
+            Gaming (84%)<br><br>
+            Bureautique (75%)<br><br>
+            Travail (72%)
+        </p>
+    </div>
+</div>
+
+<div class="d-flex flex-row" id="positionbouton">
+    <div id="boutonOrange"><a href="NomConfig.html"><p id="txtbouton1">Continuer</p></a></div>
+    <div id="bouton"><a href="ResultatQuizz.html"><p id="txtbouton2">Retour</p></a></div>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-100 w-100 bg-light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="../assets/style.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/img/logo.png" />
+    <title>Gillus</title>
+</head>
+
+<style>
+    #left {
+        margin-left: 3%;
+        width: 70%;
+    }
+
+    #right {
+        margin-right: 3%;
+        width: 30%;
+    }
+
+    #header {
+        margin-top: 50px;
+    }
+</style>
+
+<header class="d-flex justify-content-end bg-light">
+    <p id="gillus" class="bg-white px-5 py-1 rounded-3 fw-bold shadow-sm ">Gillus</p>
+
+    <div class="mx-5 my-3 d-flex flex-row">
+
+        <nav class="navbar navbar-expand-lg navbar-light py-0 bg-white rounded text-end shadow-sm px-2 mx-3 rounded-3">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a
+                                class="nav-link gradient-button rounded rounded-3 shadow-sm flex-fill text-white py-0 "
+                                aria-current="page" href="#">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark py-0" href="../pages/CommencerConfig.html">Sur
+                                mesure</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark py-0" href="#">Réparation</a></li>
+                        <li class="nav-item"><a class="gradient-button nav-link text-dark py-0" href="../pages/giloumatic.html">Créer
+                                config</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark py-0"
+                                href="../pages/ContacterSupport.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <a class="Z" href="../pages/Authentification.html"><svg xmlns="http://www.w3.org/2000/svg"
+                style="width : 40px;" class="rounded shadow-sm p-2 rounded-3" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg></a>
+    </div>
+</header>
+
+<body>
+    <div class="d-flex bg-light">
+
+        <!--left part (list componnent) -->
+        <div id="left">
+            <div id="header">
+                <div id="headercontent"
+                    class="bg-white rounded-3 fw-bold p-0 px-5 shadow nav-link text-dark text-center w-100 d-flex flex-row justify-content-around my-2">
+                    <p></p>
+                    <p class="my-auto">Titre</p>
+                    <p class="my-auto">Caractéristiques</p>
+                    <p class="my-auto">Prix</p>
+                    <p class="my-auto">Disponibilité</p>
+                </div>
+                <button id="processeur"
+                    class="btn bg-white rounded-3 fw-bold p-0 shadow nav-link text-dark text-center w-100 d-flex flex-row justify-content-around my-1 py-2"
+                    data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <img src="../assets/img/icons8-processeur-64.png">
+                    <p class="my-auto flex-grow">Processeur</p>
+                    <p></p>
+                    <p class="my-auto flex-grow"></p>
+                    <p class="my-auto flex-grow"></p>
+                    <p></p>
+                    <p class="my-auto flex-grow"></p>
+                    <img class="my-auto" src="../assets/img/icons8-plus.svg">
+                </button>
+            </div>
+        </div>
+
+        <!-- Right part -->
+        <div id="right">
+
+
+        </div>
+    </div>
+
+    <!-- Modaux -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
